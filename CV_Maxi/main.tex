@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper]{article}
+
+% Load all layout + style logic
+\input{preamble.tex}
+
+\begin{document}
+\color{cvblack}
+
+% Push content below the header + photo overlap
+\vspace*{\BodyStart}
+
+% -----------------------------
+% Two-column layout
+% -----------------------------
+\columnratio{\LeftColRatio,\dimexpr 1\relax-\LeftColRatio\relax}
+\setlength{\columnsep}{\ColSep}
+
+% Header text inside the blue bar
+\PlaceHeaderText{Maxima}{Wiegels}{Lebenslauf}
+\vspace*{0pt}
+
+\begin{paracol}{2}
+\noindent\strut
+
+% =============================
+% LEFT COLUMN
+% =============================
+\cvsection{Persönliche Daten}
+\textbf{Geburtsdatum \& -ort}\\
+16.09.2002,\\
+Hamburg
+\par
+\textbf{Adresse}\\
+Teichhausstr. 38,\\
+64287 Darmstadt
+\par
+\textbf{E-Mail}\\
+maxima.m.wiegels@gmail.com
+\par
+\textbf{Telefon}\\
+0175 8660500
+
+\cvhstripe
+
+\cvsection{Sprachkenntisse}
+\cvlanguage{Deutsch:}{C2}{6}{6}{Muttersprache}
+\cvlanguage{Englisch:}{C1}{5}{6}{fließend}
+\cvlanguage{Französisch:}{B1}{3}{6}{gute Grundkenntnisse}
+
+\cvhstripe
+
+\cvsection{IT-Kenntnisse}
+\textbf{Python}: gut
+\par
+\textbf{Matlab}: gut
+\par
+\textbf{MS Office}: sehr gut
+
+% =============================
+% RIGHT COLUMN
+% =============================
+\switchcolumn
+\noindent\strut
+
+\cvsection{Ausbildung}
+\vspace{3pt}
+\cventry{%
+  \textbf{Praktikum}\\
+  Staatsanwaltschaft Hanau
+}{%
+  01.2018
+}
+
+\cventry{%
+  \textbf{Karl-Rehbein-Gymnasium Hanau}\\
+  Allgemeine Hochschulreife mit Note 1,2\\
+  Ehrung für besondere Leistungen\\
+  im Fach Physik
+}{%
+  08.2012 -- 07.2021
+}
+
+\cventry{
+  \textbf{TU Darmstadt}\\
+  Bachelor of Sciene:\\
+  Medizintechnik\\
+  Note: 2,08\\
+  Gefördert durch Thomas-Weiland Stipendium
+}{
+  10.2021 -- 04.2025
+}
+
+\cventry{%
+  \textbf{Projektarbeit}\\
+  Laufstudie unter realen Umweltbedingungen
+}{
+  10.2025 -- 05.2025
+}
+
+\cventry{%
+  \textbf{Projektarbeit}\\
+  Stressmonitoring mittels smarter\\
+  Einlegesohle
+}{
+  07.2025
+}
+
+\cventry{
+  \textbf{Wissenschaftliche Hilfskraft}\\
+  Fachgebiet Biophotonik-Medizintechnik
+}{laufend}
+
+\cventry{
+  \textbf{TU Darmstadt}\\
+  Master of Science: Medizintechnik
+}{laufend}
+
+
+\cvhstripe
+
+
+\cvsection{Interessen}
+Ballett
+\par
+Kreatives Arbeiten
+\par
+Lesen
+\par
+Reisen
+
+\end{paracol}
+\end{document}

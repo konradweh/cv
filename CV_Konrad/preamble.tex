@@ -49,6 +49,9 @@
 % Headline font
 \newfontfamily\CalibriLight{Calibri Light}
 
+\usepackage{setspace}
+\setstretch{0.9}
+
 % -----------------------------
 % Typography helpers
 % -----------------------------
@@ -113,6 +116,17 @@
    \spaceskip=1em
    \MakeUppercase{#1}\par}%
   \vspace{1pt}%
+}
+
+\newcommand{\cvsubsection}[1]{%
+  \par\vspace*{2pt}
+  {\CalibriLight
+   \fontsize{9}{12}\selectfont
+   \color{cvblack}
+   \addfontfeatures{LetterSpace=15}
+   \spaceskip=0.5em
+   \MakeUppercase{#1}\par}%
+  \vspace{6pt}%
 }
 
 % First name in header
@@ -221,14 +235,13 @@
 \newlength{\CVLeftHT}
 
 \newlength{\CVEntryGap}
-\setlength{\CVEntryGap}{6pt} % constant space AFTER each entry
+\setlength{\CVEntryGap}{10pt} % constant space AFTER each entry
 
 % #1 = title (bold)
 % #2 = body (can contain controlled line breaks, e.g. \cvline)
 % #3 = date (right column)
 \newcommand{\cventry}[3]{%
   \begingroup
-    % Make entry spacing deterministic (ignore global parskip/parindent)
     \setlength{\parskip}{0pt}%
     \setlength{\parindent}{0pt}%
 
@@ -240,7 +253,7 @@
       \begin{minipage}[t]{\CVLeftW}%
         \raggedright
         \begin{tabularx}{\linewidth}{@{}X@{}}
-          \textbf{#1}\\[-0.15\baselineskip]
+          \textbf{#1}\par
           #2
         \end{tabularx}%
       \end{minipage}%
@@ -258,9 +271,15 @@
   \endgroup
 }
 
-% Optional helper for "clean" line breaks inside #2 (no extra vertical spacing)
-% Use inside cventry bodies instead of \\ if you want deterministic spacing.
-\newcommand{\cvline}{\newline}
+\newcommand{\cvitem}[1]{%
+  \par\noindent #1%
+  \par\vspace*{2mm}
+}
+
+\newcommand{\cvlastitem}[1]{%
+  \par\noindent #1%
+}
+
 
 % ============================================================
 % Header background, photo & vertical separator line
@@ -287,12 +306,7 @@
   % Vertical separation line between left and right content areas
   \draw[cvblue, line width=0.8pt]
     ([xshift=10mm+\SepLineX, yshift=-\HeaderH]current page.north west) --
-    ([xshift=10mm+\SepLineX, yshift=28mm]current page.south west);
-
-  % Horizontal line aligned to text width, 25mm above bottom
-  \draw[cvblue, line width=0.8pt]
-    ([yshift=18mm]current page text area.south west) --
-    ([yshift=18mm]current page text area.south east);
+    ([xshift=10mm+\SepLineX, yshift=17mm]current page.south west);
 
 \end{tikzpicture}%
 }
