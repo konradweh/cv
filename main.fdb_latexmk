@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1768929360.2879 "main.xdv" "main.pdf" "main" 1768929360.79478 0
-  "main.xdv" 1768929360 25348 dbb3aeee1ca12afa7b713f270f3570e1 "xelatex"
+["xdvipdfmx"] 1769075270.47756 "main.xdv" "main.pdf" "main" 1769075271.9881 0
+  "main.xdv" 1769075270 27736 caed15327d0cb1e2802a1bbbbf5d2b62 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1768929358.67665 "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/main.tex" "main.xdv" "main" 1768929360.78461 0
+["xelatex"] 1769075268.51179 "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/main.tex" "main.xdv" "main" 1769075271.97795 0
   "C:/Users/kw/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1766959502 37544832 723c350ed8b3bb21117cee95a44af601 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi10.tfm" 1136765053 1528 abec98dbc43e172678c11b3b9031252a ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -96,6 +96,7 @@
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1665067579 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx" 1665067579 3171 1cf0d440b5464e2f034398ce4ef36f75 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1665067579 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
+  "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/ifoddpage/ifoddpage.sty" 1667300946 2142 eae42205b97b7a3ad0e58db5fe99e3e6 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-xetex.def" 1704400941 31815 935a376385ab1feff82e3d2187c4f47a ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty" 1704401523 6565 189a69b081829349174d0a0f0ab9e4d5 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l3keys2e.sty" 1696961617 4674 15ab6bdfc97f65b00e59c2867851f715 ""
@@ -117,15 +118,16 @@
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.sty" 1673775190 348 ee405e64380c11319f0e249fed57e6c5 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.sty" 1673775190 274 5ae372b7df79135d240456a1c6f2cf9a ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1673775190 325 f9f16d12354225b7dd52a3321f085955 ""
+  "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/tikzpagenodes/tikzpagenodes.sty" 1347787799 5958 e201012c018609cdedc3209f35833fbc ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1700599895 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1700599895 10214 547fd4d29642cb7c80bf54b49d447f01 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1700599895 7147 d45559f8a31b8c53ada0640516660003 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/main.tex" 1768929276 2994 0d73bfd080ea385124a586379ff9118f ""
-  "main.aux" 1768929360 204 9336de248359095adc90e7a9f510ed86 "xelatex"
-  "main.tex" 1768929276 2994 0d73bfd080ea385124a586379ff9118f ""
+  "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/main.tex" 1769075267 3307 e4a94283815c2ed33757b8da0de85f49 ""
+  "main.aux" 1769075270 283 2919756dc550bbbefd213af131aef894 "xelatex"
+  "main.tex" 1769075267 3307 e4a94283815c2ed33757b8da0de85f49 ""
   "portrait.JPG" 1767024931 132521 f12a15b9a6e51d0360eb26053c3b49fb ""
-  "preamble.tex" 1768929277 10335 c7ddc29f2c4113b681f7f2c5e6dffaf9 ""
+  "preamble.tex" 1769075207 10398 323453f120a96bf859988eab4a82ca81 ""
   (generated)
   "main.aux"
   "main.log"

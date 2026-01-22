@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.12.28)  20 JAN 2026 18:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.12.28)  22 JAN 2026 10:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -339,32 +339,37 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen272
 \ESO@tempdimb=\dimen273
-) (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+) (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/tikzpagenodes\tikzpagenodes.sty
+Package: tikzpagenodes 2012/09/16 v1.1 Special PGF/TikZ nodes for areas of the page
+ (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count298
+)) (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2024-01-04 L3 programming layer (loader) 
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
 File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
-\g__graphics_track_int=\count298
+\g__graphics_track_int=\count299
 \l__pdf_internal_box=\box70
-\g__pdf_backend_object_int=\count299
-\g__pdf_backend_annotation_int=\count300
-\g__pdf_backend_link_int=\count301
+\g__pdf_backend_object_int=\count300
+\g__pdf_backend_annotation_int=\count301
+\g__pdf_backend_link_int=\count302
 ))
 Package: xparse 2023-10-10 L3 Experimental document command parser
 )
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
 Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count302
-\l__fontspec_language_int=\count303
-\l__fontspec_strnum_int=\count304
-\l__fontspec_tmp_int=\count305
-\l__fontspec_tmpa_int=\count306
-\l__fontspec_tmpb_int=\count307
-\l__fontspec_tmpc_int=\count308
-\l__fontspec_em_int=\count309
-\l__fontspec_emdef_int=\count310
-\l__fontspec_strong_int=\count311
-\l__fontspec_strongdef_int=\count312
+\l__fontspec_script_int=\count303
+\l__fontspec_language_int=\count304
+\l__fontspec_strnum_int=\count305
+\l__fontspec_tmp_int=\count306
+\l__fontspec_tmpa_int=\count307
+\l__fontspec_tmpb_int=\count308
+\l__fontspec_tmpc_int=\count309
+\l__fontspec_em_int=\count310
+\l__fontspec_emdef_int=\count311
+\l__fontspec_strong_int=\count312
+\l__fontspec_strongdef_int=\count313
 \l__fontspec_tmpa_dim=\dimen274
 \l__fontspec_tmpb_dim=\dimen275
 \l__fontspec_tmpc_dim=\dimen276
@@ -426,11 +431,11 @@ Package fontspec Info: Font family 'CalibriLight(0)' created for font 'Calibri
 Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count313
+\etb@tempcnta=\count314
 )
 \MT@toks=\toks34
 \MT@tempbox=\box71
-\MT@count=\count314
+\MT@count=\count315
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
 LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks35
@@ -439,7 +444,7 @@ LaTeX Info: Redefining \textls on input line 1449.
 \MT@outer@kern=\dimen277
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count315
+\MT@listname@count=\count316
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-xetex.def
 File: microtype-xetex.def 2025/07/09 v3.2b Definitions specific to xetex (RS)
 LaTeX Info: Redefining \lsstyle on input line 443.
@@ -455,9 +460,9 @@ LaTeX Info: Redefining \microtypesetup on input line 3065.
 Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count316
-\l__lipsum_a_int=\count317
-\l__lipsum_b_int=\count318
+\g__lipsum_par_int=\count317
+\l__lipsum_a_int=\count318
+\l__lipsum_b_int=\count319
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
 \HeaderH=\skip58
 \PhotoW=\skip59
@@ -642,6 +647,11 @@ Package fontspec Info: Font family 'CalibriLight(1)' created for font 'Calibri
 (fontspec)             <->"Calibri
 (fontspec)             Light/BI/OT:script=latn;language=dflt;letterspace=25;+smcp;mapping=tex-text;"
 
+
+Overfull \hbox (4.51537pt too wide) in paragraph at lines 71--72
+[]\TU/Calibri(0)/m/n/10.95 Creative projects (electronics, 3D printing,
+ []
+
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
 File: portrait.JPG Graphic file (type bmp)
 <portrait.JPG>
@@ -654,12 +664,12 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19354 strings out of 409617
- 424390 string characters out of 5774621
- 1934191 words of memory out of 5000000
- 41144 multiletter control sequences out of 15000+600000
+ 19512 strings out of 409617
+ 429095 string characters out of 5774621
+ 1935191 words of memory out of 5000000
+ 41296 multiletter control sequences out of 15000+600000
  561168 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,11n,96p,1050b,773s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,11n,96p,1050b,781s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (1 page, 25348 bytes).
+Output written on main.xdv (1 page, 27736 bytes).

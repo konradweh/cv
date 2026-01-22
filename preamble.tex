@@ -24,6 +24,7 @@
 % Drawing / background overlay (header bar, photo, separation line)
 \usepackage{tikz}
 \usepackage{eso-pic}
+\usepackage{tikzpagenodes}
 
 % -----------------------------
 % Colors
@@ -73,7 +74,7 @@
 \newlength{\PhotoW} \setlength{\PhotoW}{35mm}
 \newlength{\PhotoH} \setlength{\PhotoH}{45mm}
 \newlength{\PhotoTopOffset}
-\setlength{\PhotoTopOffset}{5mm}
+\setlength{\PhotoTopOffset}{10mm}
 
 % Column separation and ratio
 \newlength{\ColSep}
@@ -181,33 +182,32 @@
 % #4 total dashes
 % #5 description (e.g. native speaker)
 \newcommand{\cvlanguage}[5]{%
-  \par\addvspace{10pt}% space between language entries
+  \par\addvspace{10pt}%
 
   \begingroup
-    % Keep this block compact and stable regardless of global \parskip
     \setlength{\parskip}{0pt}%
 
-    % Total width = total*dash + (total-1)*gap
     \setlength{\LangBarTotalW}{%
       \dimexpr #4\LangBarDashW + \numexpr#4-1\relax\LangBarGap \relax
     }%
 
     \noindent
     \vbox{\offinterlineskip
-      % line 1: label + CEFR level
-      \hbox to \LangBarTotalW{\textbf{#1}\hfil \textbf{#2}}%
+      % line 1: label + description + CEFR level (all in one line)
+      \hbox to \LangBarTotalW{%
+        \textbf{#1}\hfil
+        \hfil#5
+        \textbf{#2}%
+      }%
       \kern\LangGapTop
 
       % line 2: bar
       \hbox{\cvlangbar{#3}{#4}}%
-      \kern\LangGapBot
-
-      % line 3: description
-      \hbox to \LangBarTotalW{#5\hfil}%
     }%
   \endgroup
   \par
 }
+
 
 % ============================================================
 % CV entries with right-aligned date (vertically centered)
@@ -275,7 +275,7 @@
     ([yshift=-\HeaderH]current page.north east);
 
   % Photo block
-  \coordinate (PhotoNW) at ([xshift=18mm,yshift=-\PhotoTopOffset]current page.north west);
+  \coordinate (PhotoNW) at ([xshift=165mm,yshift=-\PhotoTopOffset]current page.north west);
   \node[anchor=north west, fill=white, inner sep=0pt] at (PhotoNW)
   {%
     \begin{minipage}[t][\PhotoH][c]{\PhotoW}
@@ -285,9 +285,14 @@
   };
 
   % Vertical separation line between left and right content areas
-  \draw[cvblue, line width=1.0pt]
+  \draw[cvblue, line width=0.8pt]
     ([xshift=10mm+\SepLineX, yshift=-\HeaderH]current page.north west) --
-    ([xshift=10mm+\SepLineX, yshift=40mm]current page.south west);
+    ([xshift=10mm+\SepLineX, yshift=28mm]current page.south west);
+
+  % Horizontal line aligned to text width, 25mm above bottom
+  \draw[cvblue, line width=0.8pt]
+    ([yshift=18mm]current page text area.south west) --
+    ([yshift=18mm]current page text area.south east);
 
 \end{tikzpicture}%
 }
@@ -305,7 +310,7 @@
 
 \newlength{\BodyStart}
 \setlength{\BodyStart}{\HeaderH}
-\addtolength{\BodyStart}{-10mm}
+\addtolength{\BodyStart}{-15mm}
 
 % ============================================================
 % Header text placement helper
@@ -316,7 +321,7 @@
   \smash{%
     \begin{tikzpicture}[remember picture,overlay]
       \node[anchor=north west, align=left] at
-        ([xshift=12mm+\RightColX,yshift=-11mm]current page.north west)
+        ([xshift=10mm,yshift=-11mm]current page.north west)
       {%
         \cvfirstname{#1}\hspace{1.5em}\cvlastname{#2}\\[10pt]
         \cvcv{#3}%
@@ -332,7 +337,7 @@
 
 % #1 = Location, #2 = Date
 \newcommand{\cvsignature}[2]{%
-  \vspace{4\baselineskip}
+  \vspace{3\baselineskip}
 
   \noindent
   \begin{minipage}[t]{0.45\linewidth}
