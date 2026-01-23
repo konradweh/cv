@@ -31,10 +31,10 @@
 % -----------------------------
 \usepackage{xcolor}
 \definecolor{cvlightblue}{HTML}{D6DCE4}
-\definecolor{cvblue}{HTML}{AEB7C4}
+\definecolor{cvblue}{HTML}{8F9AAD}
 \definecolor{cvblack}{HTML}{000000}
 \colorlet{cvgray}{black!65}
-\colorlet{cvlightgray}{black!20}
+\colorlet{cvlightgray}{black!10}
 
 % -----------------------------
 % Fonts (XeLaTeX / LuaLaTeX)
@@ -88,14 +88,11 @@
 % Derived column helper lengths
 \newlength{\ContentW}
 \newlength{\LeftColW}
-\newlength{\RightColX}
 
 \setlength{\ContentW}{\textwidth}
 \addtolength{\ContentW}{-\ColSep}
 
 \setlength{\LeftColW}{\LeftColRatio\ContentW}
-\setlength{\RightColX}{\LeftColW}
-\addtolength{\RightColX}{\ColSep}
 
 % x-position of the vertical separator line between columns
 \newlength{\SepLineX}
@@ -273,7 +270,7 @@
 
 \newcommand{\cvitem}[1]{%
   \par\noindent #1%
-  \par\vspace*{2mm}
+  \par\vspace*{1mm}
 }
 
 \newcommand{\cvlastitem}[1]{%
@@ -294,8 +291,8 @@
     ([yshift=-\HeaderH]current page.north east);
 
   % Photo block
-  \coordinate (PhotoNW) at ([xshift=165mm,yshift=-\PhotoTopOffset]current page.north west);
-  \node[anchor=north west, fill=white, inner sep=0pt] at (PhotoNW)
+  \coordinate (PhotoNE) at ([xshift=-10mm - \PhotoW,yshift=-\PhotoTopOffset]current page.north east);
+  \node[anchor=north west, fill=white, inner sep=0pt] at (PhotoNE)
   {%
     \begin{minipage}[t][\PhotoH][c]{\PhotoW}
       \centering
@@ -306,7 +303,7 @@
   % Vertical separation line between left and right content areas
   \draw[cvblue, line width=0.8pt]
     ([xshift=10mm+\SepLineX, yshift=-\HeaderH]current page.north west) --
-    ([xshift=10mm+\SepLineX, yshift=17mm]current page.south west);
+    ([xshift=10mm+\SepLineX, yshift=10mm]current page.south west);
 
 \end{tikzpicture}%
 }

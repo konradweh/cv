@@ -4,6 +4,7 @@
 \input{preamble.tex}
 
 \begin{document}
+\pagestyle{empty}
 \color{cvblack}
 
 % Push content below the header + photo overlap
@@ -16,7 +17,7 @@
 \setlength{\columnsep}{\ColSep}
 
 % Header text inside the blue bar
-\PlaceHeaderText{Maxima}{Wiegels}{Lebenslauf}
+\PlaceHeaderText{Maxima}{Wiegels}{Curriculum Vitae}
 \vspace*{0pt}
 
 \begin{paracol}{2}
@@ -25,36 +26,53 @@
 % =============================
 % LEFT COLUMN
 % =============================
-\cvsection{Persönliche Daten}
-\textbf{Geburtsdatum \& -ort}\\
-16.09.2002,\\
-Hamburg
-\par
-\textbf{Adresse}\\
-Teichhausstr. 38,\\
-64287 Darmstadt
-\par
-\textbf{E-Mail}\\
-maxima.m.wiegels@gmail.com
-\par
-\textbf{Telefon}\\
-0175 8660500
+
+\cvsection{Profile}
+Master’s student in Medical Engineering specializing in medical device development, \newline
+with hands-on experience in .
+
 
 \cvhstripe
 
-\cvsection{Sprachkenntisse}
-\cvlanguage{Deutsch:}{C2}{6}{6}{Muttersprache}
-\cvlanguage{Englisch:}{C1}{5}{6}{fließend}
-\cvlanguage{Französisch:}{B1}{3}{6}{gute Grundkenntnisse}
+
+\cvsection{Language Skills}
+\cvlanguage{German:}{C2}{6}{6}{native speaker}
+\cvlanguage{English:}{C1}{5}{6}{fluent}
+\cvlanguage{French:}{B1}{3}{6}{basic knowledge}
+
 
 \cvhstripe
 
-\cvsection{IT-Kenntnisse}
-\textbf{Python}: gut
+
+\cvsection{IT Skills}
+\textbf{Python}: advanced
 \par
-\textbf{Matlab}: gut
+\textbf{C++}: intermediate
 \par
-\textbf{MS Office}: sehr gut
+\textbf{LabVIEW}: intermediate
+\par
+\textbf{CAD (Inventor)}: intermediate
+\par
+\textbf{MS Office / LaTeX / Origin}: advanced
+
+
+\cvhstripe
+
+
+\cvsection{Interests}
+ballett and Jazz dance
+\par
+Creative projects (electronics, 3D printing, woodworking)
+
+
+\cvhstripe
+
+
+\cvsection{Volunteer Experience}
+Coach and organizer of an inclusive hockey team for athletes with disabilities.
+\par
+C-level coaching license, responsibility for training and team development.
+
 
 % =============================
 % RIGHT COLUMN
@@ -62,71 +80,74 @@ maxima.m.wiegels@gmail.com
 \switchcolumn
 \noindent\strut
 
-\cvsection{Ausbildung}
-\vspace{3pt}
-\cventry{%
-  \textbf{Praktikum}\\
-  Staatsanwaltschaft Hanau
-}{%
-  01.2018
-}
+\cvsection{Education}\par\vspace*{8pt}
 
-\cventry{%
-  \textbf{Karl-Rehbein-Gymnasium Hanau}\\
-  Allgemeine Hochschulreife mit Note 1,2\\
-  Ehrung für besondere Leistungen\\
-  im Fach Physik
-}{%
-  08.2012 -- 07.2021
-}
+\cventry
+  {Technical University of Darmstadt}
+  {%
+      \cvitem{M.Sc. Medical Engineering.}
+      \cvlastitem{Focus on medical device development, biomedical signal processing, and healthcare technology.}
+  }
+  {04.2025 -- present (parallel enrollment)}
 
-\cventry{
-  \textbf{TU Darmstadt}\\
-  Bachelor of Sciene:\\
-  Medizintechnik\\
-  Note: 2,08\\
-  Gefördert durch Thomas-Weiland Stipendium
-}{
-  10.2021 -- 04.2025
-}
-
-\cventry{%
-  \textbf{Projektarbeit}\\
-  Laufstudie unter realen Umweltbedingungen
-}{
-  10.2025 -- 05.2025
-}
-
-\cventry{%
-  \textbf{Projektarbeit}\\
-  Stressmonitoring mittels smarter\\
-  Einlegesohle
-}{
-  07.2025
-}
-
-\cventry{
-  \textbf{Wissenschaftliche Hilfskraft}\\
-  Fachgebiet Biophotonik-Medizintechnik
-}{laufend}
-
-\cventry{
-  \textbf{TU Darmstadt}\\
-  Master of Science: Medizintechnik
-}{laufend}
+\cventry
+  {Technical University of Darmstadt}
+  {%
+      \cvitem{B.Sc. Medical Engineering.}
+      \cvitem{final grade: 1.8.}
+      \cvitem{Bachelor’s thesis: Design and implementation of a\newline
+      low-cost data acquisition system for biomedical signals.}
+      \cvlastitem{Hands-on experience in hardware design, signal processing, and system integration.}
+  }
+  {10.2021 -- 04.2025}
 
 
 \cvhstripe
+\vspace*{1pt}
 
 
-\cvsection{Interessen}
-Ballett
-\par
-Kreatives Arbeiten
-\par
-Lesen
-\par
-Reisen
+\cvsection{RELEVANT PROJECTS \& EXPERIENCE}
+
+\cvsubsection{Ion Thruster Research Group – JLU Gießen}
+
+\cventry{Student Researcher}
+{%
+  \cvitem{Conducted plasma measurements and diagnostics in the context of electric propulsion research.}
+  \cvitem{Supported experimental investigations using\newline
+  THz time-domain spectroscopy (THz-TDS).}
+  \cvlastitem{Gained experience in laboratory workflows, data evaluation, and experimental validation.}
+}{04.2023 -- 10.2023}
+
+\cventry{Project Work}
+{
+  \cvitem{Developed a global Python-based model for\newline
+  multi-species plasmas.}
+  \cvitem{Used the model to study plasma behavior relevant to electric propulsion systems.}
+  \cvlastitem{Strengthened skills in numerical modeling,\newline
+  validation, and scientific programming.}
+}{10.2024 -- 04.2026}
+
+\cventry{Project Work}
+{
+  \cvitem{Developed a Python-based simulation of \newline
+  atmospheric reentry for different space vehicles.}
+  \cvitem{Modeled key physical effects including aerodynamic forces, thermal loads, and flight dynamics.}
+  \cvlastitem{Strengthened skills in multi-physics modeling, \newline
+  numerical methods, and scientific programming.}
+}{10.2025 -- 04.2026}
+
+
+\vspace*{-4pt}
+\cvsubsection{GSI Helmholtz Centre for Heavy Ion Research}
+
+\cventry
+  {Internship}
+  {%
+      \cvitem{Work on the SHIPTRAP experiment, including the \newline
+      design of a cooling system for analogue components.}
+  }
+  {07.2025 -- 10.2025}
 
 \end{paracol}
+
 \end{document}

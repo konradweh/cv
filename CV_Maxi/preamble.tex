@@ -1,24 +1,30 @@
 % ============================================================
 % PREAMBLE.TEX
 % All non-content: packages, fonts, colors, layout, macros
+% (Cleaned up: same functionality, clearer structure & comments)
 % ============================================================
 
 % -----------------------------
-% Language
+% Language / Localization
 % -----------------------------
 \usepackage[german]{babel}
 
 % -----------------------------
-% Page Layout / Graphics
+% Page layout & basic tools
 % -----------------------------
-\usepackage[a4paper,top=18mm,bottom=18mm,left=18mm,right=18mm]{geometry}
+\usepackage[a4paper,top=10mm,bottom=10mm,left=10mm,right=10mm]{geometry}
 \usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{paracol}
-\usepackage{eso-pic}
 \usepackage{calc}
 \usepackage{array}
 \usepackage{tabularx}
+
+% Two-column content
+\usepackage{paracol}
+
+% Drawing / background overlay (header bar, photo, separation line)
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{tikzpagenodes}
 
 % -----------------------------
 % Colors
@@ -26,9 +32,9 @@
 \usepackage{xcolor}
 \definecolor{cvlightblue}{HTML}{D6DCE4}
 \definecolor{cvblue}{HTML}{AEB7C4}
+\definecolor{cvblack}{HTML}{000000}
 \colorlet{cvgray}{black!65}
 \colorlet{cvlightgray}{black!20}
-\definecolor{cvblack}{HTML}{000000}
 
 % -----------------------------
 % Fonts (XeLaTeX / LuaLaTeX)
@@ -43,29 +49,43 @@
 % Headline font
 \newfontfamily\CalibriLight{Calibri Light}
 
+\usepackage{setspace}
+\setstretch{0.9}
+
 % -----------------------------
 % Typography helpers
 % -----------------------------
 \usepackage{microtype}
 \usepackage{lipsum}
 
+% -----------------------------
+% Global paragraph settings
+% NOTE: Inside some macros we locally override parskip/parindent to keep spacing stable.
+% -----------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
 % ============================================================
-% Layout dimensions
+% Layout dimensions (header, photo, columns)
 % ============================================================
 
-% Header-height
-\newlength{\HeaderH}  \setlength{\HeaderH}{60mm}
+% Header height
+\newlength{\HeaderH}
+\setlength{\HeaderH}{40mm}
 
-% Photo dimensions
-\newlength{\PhotoW}   \setlength{\PhotoW}{35mm}
-\newlength{\PhotoH}   \setlength{\PhotoH}{45mm}
+% Photo dimensions and vertical offset
+\newlength{\PhotoW} \setlength{\PhotoW}{35mm}
+\newlength{\PhotoH} \setlength{\PhotoH}{45mm}
 \newlength{\PhotoTopOffset}
-\setlength{\PhotoTopOffset}{25mm}
+\setlength{\PhotoTopOffset}{10mm}
 
-% Column separation
-\newlength{\ColSep}   \setlength{\ColSep}{12mm}
-\newcommand{\LeftColRatio}{0.35} % <-- Adjust column ratio here
+% Column separation and ratio
+\newlength{\ColSep}
+\setlength{\ColSep}{12mm}
 
+\newcommand{\LeftColRatio}{0.35} % <-- adjust left/right column ratio here
+
+% Derived column helper lengths
 \newlength{\ContentW}
 \newlength{\LeftColW}
 \newlength{\RightColX}
@@ -77,19 +97,16 @@
 \setlength{\RightColX}{\LeftColW}
 \addtolength{\RightColX}{\ColSep}
 
-% x-position of column separation line
+% x-position of the vertical separator line between columns
 \newlength{\SepLineX}
 \setlength{\SepLineX}{\LeftColW}
 \addtolength{\SepLineX}{0.5\ColSep}
 
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt}
-
 % ============================================================
-% Macros
+% Headings and header typography
 % ============================================================
 
+% Section heading (uppercase + letter spacing)
 \newcommand{\cvsection}[1]{%
   \par
   {\CalibriLight
@@ -97,11 +114,22 @@
    \color{cvblack}
    \addfontfeatures{LetterSpace=25}
    \spaceskip=1em
-   \MakeUppercase{#1}
-   \par}%
-   \vspace{1pt}
+   \MakeUppercase{#1}\par}%
+  \vspace{1pt}%
 }
 
+\newcommand{\cvsubsection}[1]{%
+  \par\vspace*{2pt}
+  {\CalibriLight
+   \fontsize{9}{12}\selectfont
+   \color{cvblack}
+   \addfontfeatures{LetterSpace=15}
+   \spaceskip=0.5em
+   \MakeUppercase{#1}\par}%
+  \vspace{6pt}%
+}
+
+% First name in header
 \newcommand{\cvfirstname}[1]{%
   {\CalibriLight
    \fontsize{27}{32}\selectfont
@@ -111,6 +139,7 @@
    \MakeUppercase{#1}}%
 }
 
+% Last name in header
 \newcommand{\cvlastname}[1]{%
   {\CalibriLight
    \fontsize{27}{32}\selectfont
@@ -120,6 +149,7 @@
    \MakeUppercase{#1}}%
 }
 
+% "Curriculum Vitae" label in header
 \newcommand{\cvcv}[1]{%
   {\CalibriLight
    \fontsize{20}{24}\selectfont
@@ -133,19 +163,19 @@
 % Language skill bars
 % ============================================================
 
-% Styling knobs (easy to tweak)
-\newlength{\LangBarDashW}   \setlength{\LangBarDashW}{7mm}   % width of one dash
-\newlength{\LangBarDashH}   \setlength{\LangBarDashH}{0.8mm} % height of dash
-\newlength{\LangBarGap}     \setlength{\LangBarGap}{2mm}     % gap between dashes
-\newlength{\LangBarTotalW}                                   % total width of all dashes + gaps
+% --- Styling knobs (easy to tweak) ---
+\newlength{\LangBarDashW} \setlength{\LangBarDashW}{7mm}     % width of one dash
+\newlength{\LangBarDashH} \setlength{\LangBarDashH}{0.8mm}   % height of one dash
+\newlength{\LangBarGap}   \setlength{\LangBarGap}{2mm}       % gap between dashes
+\newlength{\LangBarTotalW}                                     % computed total width
 
-\newlength{\LangGapTop}     \setlength{\LangGapTop}{8pt}   % space: title -> bar
-\newlength{\LangGapBot}     \setlength{\LangGapBot}{8pt}   % space: bar -> description
+\newlength{\LangGapTop} \setlength{\LangGapTop}{8pt}         % space: title -> bar
+\newlength{\LangGapBot} \setlength{\LangGapBot}{8pt}         % space: bar -> description
 
-\colorlet{cvbaron}{cvblue}        % "filled" color
-\colorlet{cvbaroff}{cvlightgray}  % "empty" color
+\colorlet{cvbaron}{cvblue}        % "filled" dash color
+\colorlet{cvbaroff}{cvlightgray}  % "empty" dash color
 
-% Draw N dashes, first K are "on"
+% Draw N dashes, first K are "filled"
 \newcommand{\cvlangbar}[2]{%
   \begin{tikzpicture}[baseline=(current bounding box.south)]
     \foreach \i in {1,...,#2} {%
@@ -159,130 +189,153 @@
   \end{tikzpicture}%
 }
 
-% One language entry: name + level row, bar row, description row
-% #1 Language label (e.g. Deutsch:)
-% #2 Level (e.g. C2)
-% #3 filled dashes (e.g. 5)
-% #4 total dashes (e.g. 6)
-% #5 description (e.g. Muttersprache)
+% One language entry:
+% #1 label (e.g. German:)
+% #2 level (e.g. C2)
+% #3 filled dashes
+% #4 total dashes
+% #5 description (e.g. native speaker)
 \newcommand{\cvlanguage}[5]{%
-  \par\addvspace{10pt}% space between language entries
+  \par\addvspace{10pt}%
 
   \begingroup
     \setlength{\parskip}{0pt}%
 
-    % total width = total*dash + (total-1)*gap
     \setlength{\LangBarTotalW}{%
       \dimexpr #4\LangBarDashW + \numexpr#4-1\relax\LangBarGap \relax
     }%
 
     \noindent
     \vbox{\offinterlineskip
-      % line 1
-      \hbox to \LangBarTotalW{\textbf{#1}\hfil \textbf{#2}}%
+      % line 1: label + description + CEFR level (all in one line)
+      \hbox to \LangBarTotalW{%
+        \textbf{#1}\hfil
+        \hfil#5
+        \textbf{#2}%
+      }%
       \kern\LangGapTop
 
-      % bar
+      % line 2: bar
       \hbox{\cvlangbar{#3}{#4}}%
-      \kern\LangGapBot
-
-      % line 3
-      \hbox to \LangBarTotalW{#5\hfil}%
     }%
   \endgroup
   \par
 }
 
+
 % ============================================================
-% CV entry with a right-aligned date, vertically centered
+% CV entries with right-aligned date (vertically centered)
 % ============================================================
 
 \newlength{\CVDateW}
-\setlength{\CVDateW}{35mm} % <-- width reserved for the date column (adjust)
+\setlength{\CVDateW}{35mm} % width reserved for the date column (right side)
 
 \newsavebox{\CVLeftBox}
 \newlength{\CVLeftW}
 \newlength{\CVLeftHT}
 
-\newcommand{\cventry}[2]{%
-  \par\addvspace{2pt}
+\newlength{\CVEntryGap}
+\setlength{\CVEntryGap}{10pt} % constant space AFTER each entry
 
+% #1 = title (bold)
+% #2 = body (can contain controlled line breaks, e.g. \cvline)
+% #3 = date (right column)
+\newcommand{\cventry}[3]{%
   \begingroup
-    \setlength{\parskip}{0pt}
+    \setlength{\parskip}{0pt}%
+    \setlength{\parindent}{0pt}%
 
-    % Left width = full line minus date column
-    \setlength{\CVLeftW}{\dimexpr\linewidth-\CVDateW\relax}
+    \setlength{\CVLeftW}{\dimexpr\linewidth-\CVDateW\relax}%
 
-    % Typeset left block into a measuring box
+    % Left content is boxed to measure its height; date box uses the same height,
+    % so the date is vertically centered next to the text block.
     \sbox{\CVLeftBox}{%
-      \begin{minipage}[t]{\CVLeftW}
-        #1%
+      \begin{minipage}[t]{\CVLeftW}%
+        \raggedright
+        \begin{tabularx}{\linewidth}{@{}X@{}}
+          \textbf{#1}\par
+          #2
+        \end{tabularx}%
       \end{minipage}%
     }%
 
-    % Measure total height of left block
-    \setlength{\CVLeftHT}{\dimexpr\ht\CVLeftBox+\dp\CVLeftBox\relax}
+    \setlength{\CVLeftHT}{\dimexpr\ht\CVLeftBox+\dp\CVLeftBox\relax}%
 
-    % Output row
     \noindent
     \usebox{\CVLeftBox}%
     \hfill
-    \begin{minipage}[c][\CVLeftHT][c]{\CVDateW}
-      \raggedleft{\color{cvlightblue}\small #2}%
+    \begin{minipage}[c][\CVLeftHT][c]{\CVDateW}%
+      \raggedleft{\color{cvblue}\small #3}%
     \end{minipage}%
+    \par\vspace{\CVEntryGap}%
   \endgroup
 }
 
+\newcommand{\cvitem}[1]{%
+  \par\noindent #1%
+  \par\vspace*{2mm}
+}
+
+\newcommand{\cvlastitem}[1]{%
+  \par\noindent #1%
+}
+
+
 % ============================================================
-% Header background + photo
+% Header background, photo & vertical separator line
 % ============================================================
 
 \AddToShipoutPictureBG{%
 \begin{tikzpicture}[remember picture,overlay]
 
-\fill[cvlightblue]
-  (current page.north west) rectangle
-  ([yshift=-\HeaderH]current page.north east);
+  % Header background bar
+  \fill[cvlightblue]
+    (current page.north west) rectangle
+    ([yshift=-\HeaderH]current page.north east);
 
-\coordinate (PhotoNW) at ([xshift=18mm,yshift=-\PhotoTopOffset]current page.north west);
-\node[anchor=north west, fill=white, inner sep=0pt] at (PhotoNW)
-{\begin{minipage}[t][\PhotoH][c]{\PhotoW}
-\centering
-\includegraphics[width=\PhotoW,height=\PhotoH,keepaspectratio]{portrait.JPG}
-\end{minipage}};
+  % Photo block
+  \coordinate (PhotoNW) at ([xshift=165mm,yshift=-\PhotoTopOffset]current page.north west);
+  \node[anchor=north west, fill=white, inner sep=0pt] at (PhotoNW)
+  {%
+    \begin{minipage}[t][\PhotoH][c]{\PhotoW}
+      \centering
+      \includegraphics[width=\PhotoW,height=\PhotoH,keepaspectratio]{portrait.JPG}
+    \end{minipage}%
+  };
 
-% vertical separation line
-\draw[cvblue, line width=1.0pt]
-  ([xshift=18mm+\SepLineX, yshift=-\HeaderH]current page.north west) --
-  ([xshift=18mm+\SepLineX, yshift=18mm]current page.south west);
+  % Vertical separation line between left and right content areas
+  \draw[cvblue, line width=0.8pt]
+    ([xshift=10mm+\SepLineX, yshift=-\HeaderH]current page.north west) --
+    ([xshift=10mm+\SepLineX, yshift=17mm]current page.south west);
 
-\end{tikzpicture}}
+\end{tikzpicture}%
+}
 
-% --- Horizontal section separator (blue stripe) ---
-% Draws a line across the full column width (from the middle divider to the outer edge)
+% Horizontal section separator (blue stripe)
 \newcommand{\cvhstripe}{%
-  \par\vspace{10pt}%
+  \par\vspace{5pt}%
   \noindent{\color{cvblue}\rule{\linewidth}{0.8pt}}%
-  \par\vspace{10pt}%
+  \par\vspace{5pt}%
 }
 
 % ============================================================
-% Body start offset
+% Body start offset (push content below header bar / photo overlap)
 % ============================================================
 
 \newlength{\BodyStart}
 \setlength{\BodyStart}{\HeaderH}
-\addtolength{\BodyStart}{-7mm}
+\addtolength{\BodyStart}{-15mm}
 
 % ============================================================
 % Header text placement helper
 % ============================================================
 
+% Places the name + title text inside the header bar (right column zone)
 \newcommand{\PlaceHeaderText}[3]{%
   \smash{%
     \begin{tikzpicture}[remember picture,overlay]
       \node[anchor=north west, align=left] at
-      ([xshift=18mm+\RightColX,yshift=-18mm-6mm]current page.north west)
+        ([xshift=10mm,yshift=-11mm]current page.north west)
       {%
         \cvfirstname{#1}\hspace{1.5em}\cvlastname{#2}\\[10pt]
         \cvcv{#3}%
@@ -290,4 +343,23 @@
     \end{tikzpicture}%
   }%
   \par\nointerlineskip
+}
+
+% ============================================================
+% Signature (place at end of document)
+% ============================================================
+
+% #1 = Location, #2 = Date
+\newcommand{\cvsignature}[2]{%
+  \vspace{3\baselineskip}
+
+  \noindent
+  \begin{minipage}[t]{0.45\linewidth}
+    #1, #2
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.45\linewidth}
+    \rule{6cm}{0.4pt}\\[-0.2\baselineskip]
+    \textit{Konrad Wehkamp}
+  \end{minipage}%
 }

@@ -1,6 +1,6 @@
-PWD c:\Users\kw\Documents\Bewerbungszeug\CV_latex\cv
+PWD c:\Users\kw\Documents\Bewerbungszeug\CV_latex\cv\CV_Konrad
 INPUT C:\Users\kw\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
-INPUT c:\Users\kw\Documents\Bewerbungszeug\CV_latex\cv\main.tex
+INPUT c:\Users\kw\Documents\Bewerbungszeug\CV_latex\cv\CV_Konrad\main.tex
 OUTPUT main.log
 INPUT C:\Users\kw\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\kw\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls

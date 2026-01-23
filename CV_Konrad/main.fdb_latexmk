@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1769099327.81222 "main.xdv" "main.pdf" "main" 1769099329.27782 0
-  "main.xdv" 1769099327 33260 ae8694a1d0f1100fcf626e827c743f64 "xelatex"
+["xdvipdfmx"] 1769171741.7553 "main.xdv" "main.pdf" "main" 1769171742.2601 0
+  "main.xdv" 1769171741 35088 68ac2e65e39ce2119f3ff84942afc4f2 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1769099325.96304 "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/main.tex" "main.xdv" "main" 1769099329.26859 0
+["xelatex"] 1769171740.12927 "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/CV_Konrad/main.tex" "main.xdv" "main" 1769171742.25293 0
   "C:/Users/kw/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1766959502 37544832 723c350ed8b3bb21117cee95a44af601 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi10.tfm" 1136765053 1528 abec98dbc43e172678c11b3b9031252a ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -124,11 +124,11 @@
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1700599895 10214 547fd4d29642cb7c80bf54b49d447f01 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1700599895 7147 d45559f8a31b8c53ada0640516660003 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/main.tex" 1769098826 4091 7b4f5b19df4959ca1a37c220553678d6 ""
-  "main.aux" 1769099327 283 2919756dc550bbbefd213af131aef894 "xelatex"
-  "main.tex" 1769098826 4091 7b4f5b19df4959ca1a37c220553678d6 ""
+  "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/CV_Konrad/main.tex" 1769170644 4365 d98140ee6bcc446348c44544c28a120c ""
+  "main.aux" 1769171741 283 2919756dc550bbbefd213af131aef894 "xelatex"
+  "main.tex" 1769170644 4365 d98140ee6bcc446348c44544c28a120c ""
   "portrait.JPG" 1767024931 132521 f12a15b9a6e51d0360eb26053c3b49fb ""
-  "preamble.tex" 1769099325 10312 dfc9fcfeb0168b7bd837c3242e5e4cbd ""
+  "preamble.tex" 1769171739 10228 4a5c3efc6ec04e1e8cdc93f78ae59e23 ""
   (generated)
   "main.aux"
   "main.log"

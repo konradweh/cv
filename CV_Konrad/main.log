@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.12.28)  22 JAN 2026 17:28
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.12.28)  23 JAN 2026 13:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/main.tex
-(c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/main.tex
+**c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/CV_Konrad/main.tex
+(c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/CV_Konrad/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -473,20 +473,19 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \ColSep=\skip62
 \ContentW=\skip63
 \LeftColW=\skip64
-\RightColX=\skip65
-\SepLineX=\skip66
-\LangBarDashW=\skip67
-\LangBarDashH=\skip68
-\LangBarGap=\skip69
-\LangBarTotalW=\skip70
-\LangGapTop=\skip71
-\LangGapBot=\skip72
-\CVDateW=\skip73
+\SepLineX=\skip65
+\LangBarDashW=\skip66
+\LangBarDashH=\skip67
+\LangBarGap=\skip68
+\LangBarTotalW=\skip69
+\LangGapTop=\skip70
+\LangGapBot=\skip71
+\CVDateW=\skip72
 \CVLeftBox=\box72
-\CVLeftW=\skip74
-\CVLeftHT=\skip75
-\CVEntryGap=\skip76
-\BodyStart=\skip77
+\CVLeftW=\skip73
+\CVLeftHT=\skip74
+\CVEntryGap=\skip75
+\BodyStart=\skip76
 ) (main.aux)
 \openout1 = `main.aux'.
 
@@ -650,17 +649,17 @@ Package fontspec Info: Font family 'CalibriLight(1)' created for font 'Calibri
 (fontspec)             Light/BI/OT:script=latn;language=dflt;letterspace=25;+smcp;mapping=tex-text;"
 
 
-Overfull \hbox (4.51537pt too wide) in paragraph at lines 66--67
+Overfull \hbox (4.51537pt too wide) in paragraph at lines 68--69
 []\TU/Calibri(0)/m/n/10.95 Creative projects (electronics, 3D printing,
  []
 
 
-Overfull \hbox (7.10522pt too wide) in paragraph at lines 73--74
+Overfull \hbox (7.10522pt too wide) in paragraph at lines 75--76
 []\TU/Calibri(0)/m/n/10.95 Coach and organizer of an inclusive hockey
  []
 
 
-Overfull \hbox (3.83278pt too wide) in paragraph at lines 75--76
+Overfull \hbox (3.83278pt too wide) in paragraph at lines 77--78
 []\TU/Calibri(0)/m/n/10.95 C-level coaching license, responsibility for
  []
 
@@ -693,7 +692,7 @@ Package fontspec Info: Font family 'CalibriLight(2)' created for font 'Calibri
 (fontspec)             Light/BI/OT:script=latn;language=dflt;letterspace=15;+smcp;mapping=tex-text;"
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 121--121
+Underfull \hbox (badness 1173) in paragraph at lines 144--144
 \TU/Calibri(0)/m/n/10.95 Gained experience in laboratory workflows, data
  []
 
@@ -708,12 +707,12 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19550 strings out of 409617
- 430249 string characters out of 5774621
- 1936191 words of memory out of 5000000
- 41319 multiletter control sequences out of 15000+600000
+ 19556 strings out of 409617
+ 430459 string characters out of 5774621
+ 1937191 words of memory out of 5000000
+ 41325 multiletter control sequences out of 15000+600000
  561256 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,11n,96p,1050b,781s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,11n,96p,1060b,973s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (1 page, 33260 bytes).
+Output written on main.xdv (1 page, 35088 bytes).
