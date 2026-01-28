@@ -17,6 +17,7 @@
 \usepackage{calc}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
 
 % Two-column content
 \usepackage{paracol}
@@ -71,13 +72,13 @@
 
 % Header height
 \newlength{\HeaderH}
-\setlength{\HeaderH}{40mm}
+\setlength{\HeaderH}{35mm}
 
 % Photo dimensions and vertical offset
 \newlength{\PhotoW} \setlength{\PhotoW}{35mm}
 \newlength{\PhotoH} \setlength{\PhotoH}{45mm}
-\newlength{\PhotoTopOffset}
-\setlength{\PhotoTopOffset}{10mm}
+\newlength{\PhotoOffset}
+\setlength{\PhotoOffset}{8mm}
 
 % Column separation and ratio
 \newlength{\ColSep}
@@ -291,7 +292,7 @@
     ([yshift=-\HeaderH]current page.north east);
 
   % Photo block
-  \coordinate (PhotoNE) at ([xshift=-10mm - \PhotoW,yshift=-\PhotoTopOffset]current page.north east);
+  \coordinate (PhotoNE) at ([xshift=-\PhotoOffset - \PhotoW,yshift=-\PhotoOffset]current page.north east);
   \node[anchor=north west, fill=white, inner sep=0pt] at (PhotoNE)
   {%
     \begin{minipage}[t][\PhotoH][c]{\PhotoW}
@@ -332,7 +333,7 @@
   \smash{%
     \begin{tikzpicture}[remember picture,overlay]
       \node[anchor=north west, align=left] at
-        ([xshift=10mm,yshift=-11mm]current page.north west)
+        ([xshift=10mm,yshift=-8.5mm]current page.north west)
       {%
         \cvfirstname{#1}\hspace{1.5em}\cvlastname{#2}\\[10pt]
         \cvcv{#3}%
