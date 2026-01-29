@@ -78,7 +78,7 @@
 \newlength{\PhotoW} \setlength{\PhotoW}{35mm}
 \newlength{\PhotoH} \setlength{\PhotoH}{45mm}
 \newlength{\PhotoOffset}
-\setlength{\PhotoOffset}{-6mm}
+\setlength{\PhotoOffset}{-7mm}
 
 % Column separation and ratio
 \newlength{\ColSep}
@@ -285,22 +285,25 @@
 
 \AddToShipoutPictureBG{%
 \begin{tikzpicture}[remember picture,overlay]
+  % Header vertical center reference
+  \coordinate (HeaderCenterY) at ([yshift=-0.5\HeaderH]current page.north west);
 
   % Header background bar
   \fill[cvlightblue]
     (current page.north west) rectangle
     ([yshift=-\HeaderH]current page.north east);
 
-  % Photo block
-  \coordinate (PhotoNE) at ([xshift=-8mm - \PhotoW,yshift=-\PhotoOffset]current page.north east);
-  \node[
-    anchor=north west
-  ] at (PhotoNE)
-  {%
-    \begin{minipage}[t][\PhotoH][c]{\PhotoW}
-      \centering
-      \includegraphics[width=0.9\PhotoW,height=0.9\PhotoH,keepaspectratio]{portrait_circle.png}
-    \end{minipage}%
+  % Photo block (vertically centered in header)
+  \coordinate (PhotoC) at ([xshift=-10mm-0.5\PhotoW]HeaderCenterY -| current page.north east);
+  \node[anchor=center] at (PhotoC) {%
+    \begin{tikzpicture}
+      \node (img) {\includegraphics[
+        width=0.95\PhotoW,
+        height=0.95\PhotoH,
+        keepaspectratio
+      ]{portrait_circle.png}};
+      \draw[line width=0.8pt, color=cvblue] (img.center) circle[radius=0.475\PhotoW];
+    \end{tikzpicture}%
   };
 
   % Vertical separation line between left and right content areas
@@ -332,17 +335,15 @@
 
 % Places the name + title text inside the header bar (right column zone)
 \newcommand{\PlaceHeaderText}[3]{%
-  \smash{%
-    \begin{tikzpicture}[remember picture,overlay]
-      \node[anchor=north west, align=left] at
-        ([xshift=10mm,yshift=-8.5mm]current page.north west)
-      {%
-        \cvfirstname{#1}\hspace{1.5em}\cvlastname{#2}\\[10pt]
-        \cvcv{#3}%
-      };
-    \end{tikzpicture}%
-  }%
-  \par\nointerlineskip
+  \begin{tikzpicture}[remember picture,overlay]
+    % vertical center of the header bar
+    \coordinate (HeaderCenterY) at ([yshift=-0.5\HeaderH]current page.north west);
+
+    \node[anchor=west, align=left] at ([xshift=10mm]HeaderCenterY) {%
+      \cvfirstname{#1}\hspace{1.5em}\cvlastname{#2}\\[10pt]
+      \cvcv{#3}%
+    };
+  \end{tikzpicture}%
 }
 
 % ============================================================
