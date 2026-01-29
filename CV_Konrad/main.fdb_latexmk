@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1769714541.16065 "main.xdv" "main.pdf" "main" 1769714544.49463 0
-  "main.xdv" 1769714540 37116 b6b9d82894b8c3274c15a9ceea45246a "xelatex"
+["xdvipdfmx"] 1769717823.16518 "main.xdv" "main.pdf" "main" 1769717826.18372 0
+  "main.xdv" 1769717822 36792 c24ec2300eff64e6e2393df73b68fbb0 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1769714535.93727 "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/CV_Konrad/main.tex" "main.xdv" "main" 1769714544.48288 0
+["xelatex"] 1769717820.84504 "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/CV_Konrad/main.tex" "main.xdv" "main" 1769717826.16343 0
   "C:/Users/kw/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1766959502 37544832 723c350ed8b3bb21117cee95a44af601 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768654 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi10.tfm" 1136765053 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -151,12 +151,12 @@
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1700599895 7147 d45559f8a31b8c53ada0640516660003 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/CV_Konrad/main.tex" 1769711984 4535 01f38e1677f46f97694f88837a8b913b ""
-  "main.aux" 1769714540 442 3b286c0561c959f4457a5e819b10cf0d "xelatex"
-  "main.out" 1769714540 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "main.tex" 1769711984 4535 01f38e1677f46f97694f88837a8b913b ""
-  "portrait_circle.png" 1769707184 2106658 b44d75ec049ca7afad5291309fb2464d ""
-  "preamble.tex" 1769714532 10513 9dbb2bd6e656ebc4e1e723fa6cb0dcf0 ""
+  "c:/Users/kw/Documents/Bewerbungszeug/CV_latex/cv/CV_Konrad/main.tex" 1769717817 4485 0a87f6a445f69de87b51ca89be323dd3 ""
+  "main.aux" 1769717822 442 3b286c0561c959f4457a5e819b10cf0d "xelatex"
+  "main.out" 1769717822 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "main.tex" 1769717817 4485 0a87f6a445f69de87b51ca89be323dd3 ""
+  "portrait_circle.png" 1769714819 2106658 b44d75ec049ca7afad5291309fb2464d ""
+  "preamble.tex" 1769714819 10513 9dbb2bd6e656ebc4e1e723fa6cb0dcf0 ""
   (generated)
   "main.aux"
   "main.log"
