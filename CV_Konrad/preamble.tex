@@ -78,7 +78,7 @@
 \newlength{\PhotoW} \setlength{\PhotoW}{35mm}
 \newlength{\PhotoH} \setlength{\PhotoH}{45mm}
 \newlength{\PhotoOffset}
-\setlength{\PhotoOffset}{8mm}
+\setlength{\PhotoOffset}{-6mm}
 
 % Column separation and ratio
 \newlength{\ColSep}
@@ -292,12 +292,14 @@
     ([yshift=-\HeaderH]current page.north east);
 
   % Photo block
-  \coordinate (PhotoNE) at ([xshift=-\PhotoOffset - \PhotoW,yshift=-\PhotoOffset]current page.north east);
-  \node[anchor=north west, fill=white, inner sep=0pt] at (PhotoNE)
+  \coordinate (PhotoNE) at ([xshift=-8mm - \PhotoW,yshift=-\PhotoOffset]current page.north east);
+  \node[
+    anchor=north west
+  ] at (PhotoNE)
   {%
     \begin{minipage}[t][\PhotoH][c]{\PhotoW}
       \centering
-      \includegraphics[width=\PhotoW,height=\PhotoH,keepaspectratio]{portrait.JPG}
+      \includegraphics[width=0.9\PhotoW,height=0.9\PhotoH,keepaspectratio]{portrait_circle.png}
     \end{minipage}%
   };
 

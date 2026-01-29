@@ -280,9 +280,9 @@ INPUT C:\Users\kw\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\kw\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\kw\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\kw\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-INPUT .\portrait.JPG
-INPUT .\portrait.JPG
-INPUT .\portrait.JPG
+INPUT .\portrait_circle.png
+INPUT .\portrait_circle.png
+INPUT .\portrait_circle.png
 OUTPUT main.xdv
 INPUT main.aux
 INPUT .\main.out
