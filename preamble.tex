@@ -301,15 +301,18 @@
         width=0.95\PhotoW,
         height=0.95\PhotoH,
         keepaspectratio
-      ]{portrait_circle.png}};
+      ]{portrait_circle_resized.png}};
       \draw[line width=0.8pt, color=cvblue] (img.center) circle[radius=0.475\PhotoW];
     \end{tikzpicture}%
   };
 
-  % Vertical separation line between left and right content areas
-  \draw[cvblue, line width=0.8pt]
-    ([xshift=10mm+\SepLineX, yshift=-\HeaderH]current page.north west) --
-    ([xshift=10mm+\SepLineX, yshift=15mm]current page.south west);
+    % Vertical separation line between left and right content areas
+    \ifnum\value{page}=1
+      \draw[cvblue, line width=0.8pt]
+        ([xshift=10mm+\SepLineX, yshift=-\HeaderH]current page.north west) --
+        ([xshift=10mm+\SepLineX, yshift=15mm]current page.south west);
+    \fi
+
 
 \end{tikzpicture}%
 }
